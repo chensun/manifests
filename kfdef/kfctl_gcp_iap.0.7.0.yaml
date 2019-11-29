@@ -271,7 +271,6 @@ spec:
     name: pipelines-runner
   - kustomizeConfig:
       overlays:
-      - gcp
       - istio
       - application
       repoRef:
