@@ -94,19 +94,6 @@ spec:
   - kustomizeConfig:
       overlays:
       - istio
-      - application
-      parameters:
-      - name: userid-header
-        value: X-Goog-Authenticated-User-Email
-      - name: userid-prefix
-        value: 'accounts.google.com:'
-      repoRef:
-        name: manifests
-        path: jupyter/jupyter-web-app
-    name: jupyter-web-app
-  - kustomizeConfig:
-      overlays:
-      - istio
       repoRef:
         name: manifests
         path: metadata
@@ -114,110 +101,10 @@ spec:
   - kustomizeConfig:
       overlays:
       - istio
-      - application
-      parameters:
-      - name: injectGcpCredentials
-        value: "true"
-      repoRef:
-        name: manifests
-        path: jupyter/notebook-controller
-    name: notebook-controller
-  - kustomizeConfig:
-      overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: pytorch-job/pytorch-job-crds
-    name: pytorch-job-crds
-  - kustomizeConfig:
-      overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: pytorch-job/pytorch-operator
-    name: pytorch-operator
-  - kustomizeConfig:
-      overlays:
-      - application
-      parameters:
-      - name: namespace
-        value: knative-serving
-      repoRef:
-        name: manifests
-        path: knative/knative-serving-crds
-    name: knative-crds
-  - kustomizeConfig:
-      overlays:
-      - application
-      parameters:
-      - name: namespace
-        value: knative-serving
-      repoRef:
-        name: manifests
-        path: knative/knative-serving-install
-    name: knative-install
-  - kustomizeConfig:
-      overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: kfserving/kfserving-crds
-    name: kfserving-crds
-  - kustomizeConfig:
-      overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: kfserving/kfserving-install
-    name: kfserving-install
-  - kustomizeConfig:
-      overlays:
-      - application
-      parameters:
-      - name: usageId
-        value: "7439583937720421527"
-      - name: reportUsage
-        value: "true"
-      repoRef:
-        name: manifests
-        path: common/spartakus
-    name: spartakus
-  - kustomizeConfig:
-      overlays:
-      - istio
       repoRef:
         name: manifests
         path: tensorboard
     name: tensorboard
-  - kustomizeConfig:
-      overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: tf-training/tf-job-crds
-    name: tf-job-crds
-  - kustomizeConfig:
-      overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: tf-training/tf-job-operator
-    name: tf-job-operator
-  - kustomizeConfig:
-      overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: katib/katib-crds
-    name: katib-crds
-  - kustomizeConfig:
-      overlays:
-      - application
-      - istio
-      repoRef:
-        name: manifests
-        path: katib/katib-controller
-    name: katib-controller
   - kustomizeConfig:
       overlays:
       - application
@@ -323,13 +210,6 @@ spec:
     name: profiles
   - kustomizeConfig:
       overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: gcp/gpu-driver
-    name: gpu-driver
-  - kustomizeConfig:
-      overlays:
       - managed-cert
       - application
       parameters:
@@ -346,13 +226,6 @@ spec:
         name: manifests
         path: gcp/iap-ingress
     name: iap-ingress
-  - kustomizeConfig:
-      overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: seldon/seldon-core-operator
-    name: seldon-core-operator
   - kustomizeConfig:
       parameters:
       - name: user
