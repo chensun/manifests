@@ -11,6 +11,8 @@ spec:
       component: server
   template:
     metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         component: server
     spec:
@@ -73,6 +75,8 @@ spec:
       component: grpc-server
   template:
     metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         component: grpc-server
     spec:

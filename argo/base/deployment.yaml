@@ -21,6 +21,8 @@ spec:
   template:
     metadata:
       creationTimestamp: null
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         app: argo-ui
     spec:
@@ -75,6 +77,8 @@ spec:
   template:
     metadata:
       creationTimestamp: null
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         app: workflow-controller
     spec:

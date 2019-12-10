@@ -9,6 +9,8 @@ spec:
       app: application-controller
   template:
     metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         app: application-controller
     spec:

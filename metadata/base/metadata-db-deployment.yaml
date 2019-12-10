@@ -9,6 +9,8 @@ spec:
   template:
     metadata:
       name: db
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         component: db
     spec:

@@ -11,6 +11,8 @@ spec:
   template:
     metadata:
       name: ui
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         app: metadata-ui
     spec:
