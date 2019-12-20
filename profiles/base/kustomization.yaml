@@ -15,7 +15,7 @@ configMapGenerator:
   env: params.env
 images:
 - name: gcr.io/kubeflow-images-public/profile-controller
-  newName: gcr.io/ml-pipeline-dogfood/ngao-profile-controller
+  newName: gcr.io/ml-pipeline/multi-user-stage-1/profile-controller
   digest: sha256:340a3dde2674824ca3580c17a106a72f73ed0b7cbee9f59bebe086dbde8ed7e3
 - name: gcr.io/kubeflow-images-public/kfam
   digest: sha256:3b0d4be7e59a3fa5ed1d80dccc832312caa94f3b2d36682524d3afc4e45164f0
