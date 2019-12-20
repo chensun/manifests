@@ -12,8 +12,7 @@ resources:
 - service.yaml
 images:
 - name: gcr.io/ml-pipeline/api-server
-  newName: gcr.io/ml-pipeline-dogfood/ngao-api-server
-  digest: sha256:7317b1d161de3c6c937639d1827e72ada254a052e2be90d6131629592df84721
+  newTag: 0.1.38
 configurations:
 - params.yaml
 vars:
