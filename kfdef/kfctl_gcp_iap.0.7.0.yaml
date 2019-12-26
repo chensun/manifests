@@ -100,13 +100,6 @@ spec:
     name: metadata
   - kustomizeConfig:
       overlays:
-      - istio
-      repoRef:
-        name: manifests
-        path: tensorboard
-    name: tensorboard
-  - kustomizeConfig:
-      overlays:
       - application
       repoRef:
         name: manifests
