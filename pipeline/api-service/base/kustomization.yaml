@@ -12,8 +12,7 @@ resources:
 - service.yaml
 images:
 - name: gcr.io/ml-pipeline/api-server
-  newName: gcr.io/ml-pipeline/multi-user-stage-1/api-image-patch
-  digest: sha256:482a545089b7adf81f6b6c390207a867465f5ab963d834ca0d91545098374030
+  newTag: 0.1.39
 configurations:
 - params.yaml
 vars:
