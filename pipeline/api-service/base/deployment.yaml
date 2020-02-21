@@ -8,6 +8,8 @@ spec:
       containers:
       - name: ml-pipeline-api-server
         env:
+        - name: SHARED_NAMESPACE
+          value: "kubeflow-shared"
         - name: POD_NAMESPACE
           valueFrom:
             fieldRef:
