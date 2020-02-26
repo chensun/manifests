@@ -32,3 +32,10 @@ rules:
   - pods
   verbs:
   - delete
+- apiGroups:
+  - ""
+  resources:
+  - namespaces
+  verbs:
+  - create
+  - get
